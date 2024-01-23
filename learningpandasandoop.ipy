@@ -1,0 +1,32 @@
+class Animal():
+    def __init__(self,name,age,description):
+        self.name = name
+        self.age = age
+        self.des = description
+    def xemThongtin(self):
+        print(self.name,self.age,self.description)
+    def tiengkeu(self):
+        print('speaking...')
+
+class Tiger(Animal):
+    def xemthongtintiger(self):
+        self.xemThongtin()
+        print()
+    def tiengkeu(self):
+        print('Grao')
+class Dog(Animal):
+    def xemthongtindog(self):
+        self.xemThongtin()
+    def tiengkeu(self):
+        print('Grau')
+class Duck(Animal):
+    def xemthongtinduck(self):
+        self.xemThongtin()
+    def tiengkeu(self):
+        return super().tiengkeu()
+
+
+c = Dog('Milo',4,'long vang')
+c.tiengkeu()
+
+ 
