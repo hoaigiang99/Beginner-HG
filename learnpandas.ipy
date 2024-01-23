@@ -1,0 +1,16 @@
+import pandas as pd
+data = pd.read_excel(r'D:\data.xlsx')
+print(data.columns.tolist())
+print(data)
+df = pd.read_excel('D:\data.xlsx',sheet_name='Sheet1',usecols=['Ho va ten','Gioi tinh'])
+print(df.to_dict(orient='dict'))
+
+
+
+import pandas as pd
+df = pd.read_excel('D:\data.xlsx')
+print(df.to_dict())
+df= df.astype(str)
+for i in range(len(df['SDT'])):
+    df['SDT'][i]= '0' + str(df['SDT'][i])
+print(df)
